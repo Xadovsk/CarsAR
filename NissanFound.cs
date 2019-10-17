@@ -11,7 +11,7 @@ public class NissanFound : MonoBehaviour, ITrackableEventHandler
     public GameObject nissanB, silvia;
     public GameObject info, infoPanel;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
@@ -20,11 +20,7 @@ public class NissanFound : MonoBehaviour, ITrackableEventHandler
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    //Check to see if the image found is the nissan logo. If it is activate car models, buttons and infos.
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
     {
         if (newStatus == TrackableBehaviour.Status.DETECTED || newStatus == TrackableBehaviour.Status.TRACKED)
