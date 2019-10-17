@@ -5,22 +5,14 @@ using UnityEngine.UI;
 
 public class ShowCar : MonoBehaviour
 {
-    
+    //set models for cars
     public GameObject monza;
     public GameObject camaro;
     public GameObject cien, other, silvia, gtr, info;
-    
-    //private bool showingC;
-    //private bool showingM, showingCien, showingOther;
-
+    //set texts for infos
     public Text velT, torqueT, pesoT, anoT, potenciaT, motorT;
-    void Start()
-    {
-        
-
-    }
-
-  
+    
+    //Checks which car is active at the moment to update the infos. Needs a little work, it's a bit bugged.
     void Update()
     {
         if(camaro.active == true)
@@ -63,6 +55,7 @@ public class ShowCar : MonoBehaviour
         }
     }
 
+    //Activates cars and update infos texts. Called by buttons in-game
     public void ShowCamaro(){
         if(monza.active == true)
         {
